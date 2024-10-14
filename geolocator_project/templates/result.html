@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+Geo Locator Result
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1 class="mt-5">Country: {{ country_name }}</h1>
+        <div id="map" class="mt-4">{{ country_map | safe }}</div>
+        <a class="btn btn-primary mt-3" href="{% url 'index' %}">Back</a>
+    </div>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+{% endblock %}
